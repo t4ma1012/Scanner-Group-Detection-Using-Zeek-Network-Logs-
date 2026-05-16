@@ -1,0 +1,10 @@
+
+masscan_100
+masscan_50
+masscan_20
+nmap_sS
+nmap_sV
+nmap_sO
+zmap_22
+zmap_80
+benign

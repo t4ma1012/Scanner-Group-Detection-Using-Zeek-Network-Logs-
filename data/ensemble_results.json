@@ -1,0 +1,133 @@
+{
+  "best_alpha": 0.4,
+  "formula": "Final = 0.40 \u00d7 Flow_Prob + 0.60 \u00d7 Payload_Prob",
+  "cv_results": [
+    {
+      "alpha": 0.0,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.05,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.1,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.15,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.2,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.25,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.3,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.35,
+      "f1_mean": 0.9223,
+      "f1_std": 0.0768
+    },
+    {
+      "alpha": 0.4,
+      "f1_mean": 0.9247,
+      "f1_std": 0.0772
+    },
+    {
+      "alpha": 0.45,
+      "f1_mean": 0.9247,
+      "f1_std": 0.0772
+    },
+    {
+      "alpha": 0.5,
+      "f1_mean": 0.9247,
+      "f1_std": 0.0772
+    },
+    {
+      "alpha": 0.55,
+      "f1_mean": 0.9247,
+      "f1_std": 0.0772
+    },
+    {
+      "alpha": 0.6,
+      "f1_mean": 0.9247,
+      "f1_std": 0.0772
+    },
+    {
+      "alpha": 0.65,
+      "f1_mean": 0.9247,
+      "f1_std": 0.0772
+    },
+    {
+      "alpha": 0.7,
+      "f1_mean": 0.918,
+      "f1_std": 0.0588
+    },
+    {
+      "alpha": 0.75,
+      "f1_mean": 0.918,
+      "f1_std": 0.0588
+    },
+    {
+      "alpha": 0.8,
+      "f1_mean": 0.9021,
+      "f1_std": 0.0623
+    },
+    {
+      "alpha": 0.85,
+      "f1_mean": 0.9021,
+      "f1_std": 0.0623
+    },
+    {
+      "alpha": 0.9,
+      "f1_mean": 0.8898,
+      "f1_std": 0.0588
+    },
+    {
+      "alpha": 0.95,
+      "f1_mean": 0.8898,
+      "f1_std": 0.0588
+    },
+    {
+      "alpha": 1.0,
+      "f1_mean": 0.8898,
+      "f1_std": 0.0588
+    }
+  ],
+  "n_folds": 5,
+  "n_samples": 85,
+  "flow_features": [
+    "conn_rate",
+    "packets_per_conn",
+    "bytes_per_conn",
+    "port_entropy",
+    "ip_entropy",
+    "diff_dest_ports",
+    "inter_arrival_time_std",
+    "duration_std",
+    "mean_duration",
+    "syn_ratio",
+    "rst_ratio",
+    "success_rate"
+  ],
+  "payload_features": [
+    "valid_payload_ratio",
+    "suspicious_history_ratio"
+  ],
+  "best_f1": 0.9247,
+  "best_f1_std": 0.0772
+}
