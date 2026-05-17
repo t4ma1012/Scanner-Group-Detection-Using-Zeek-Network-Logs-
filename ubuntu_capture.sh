@@ -1,7 +1,6 @@
 #!/bin/bash
 # ============================================================
 # UBUNTU SIDE: Auto capture + save log per tool
-# Chạy: sudo bash ubuntu_capture.sh
 # ============================================================
 
 ZEEK_BIN="/opt/zeek/bin/zeek"
@@ -17,7 +16,6 @@ mkdir -p "$BASE_DIR"/{nmap_sS,nmap_sV,nmap_sO,masscan_100,masscan_50,masscan_20,
 
 log "=== Ubuntu Capture Script Started ==="
 log "Waiting for Kali to start..."
-log "Signal file: $SIGNAL_FILE"
 
 capture_tool() {
     local TOOL_NAME=$1
@@ -46,14 +44,12 @@ capture_tool() {
     sudo kill "$ZEEK_PID" 2>/dev/null
     sleep 2
 
-    # Giữ lại conn.log, xóa log rác
     find "$TMPDIR" -type f ! -name "conn.log" -delete 
-
-    cp "$TMPDIR"/conn.log "$SAVE_DIR/" 2>/dev/null
-    
-    if [ -f "$SAVE_DIR/conn.log" ]; then
-        gzip -f "$SAVE_DIR/conn.log"
-        log "Saved: $SAVE_DIR/conn.log.gz ($(zcat "$SAVE_DIR/conn.log.gz" | grep -v '^#' | wc -l) rows)"
+    TIMESTAMP=$(date +%s)
+    cp "$TMPDIR"/conn.log "$SAVE_DIR/conn_${TIMESTAMP}.log" 2>/dev/null
+    if [ -f "$SAVE_DIR/conn_${TIMESTAMP}.log" ]; then
+        gzip -f "$SAVE_DIR/conn_${TIMESTAMP}.log"
+        log "Saved: $SAVE_DIR/conn_${TIMESTAMP}.log.gz"
     fi
 
     cd /home/t4ma || exit
@@ -70,7 +66,8 @@ sudo touch "$SIGNAL_FILE"
 sudo chmod 666 "$SIGNAL_FILE"
 sudo sh -c "echo '' > $SIGNAL_FILE"
 
-TOOLS=("masscan_100" "masscan_50" "masscan_20" "nmap_sS" "nmap_sV" "nmap_sO" "zmap_22" "zmap_80" "benign")
+# DANH SÁCH TOOLS CHỈ CÒN LẠI NMAP, ZMAP VÀ BENIGN
+TOOLS=("nmap_sS" "nmap_sV" "nmap_sO" "zmap_22" "zmap_80" "benign")
 
 log "=== Starting capture sequence (${#TOOLS[@]} tools) ==="
 
@@ -94,5 +91,4 @@ for TOOL in "${TOOLS[@]}"; do
     capture_tool "$TOOL"
 done
 
-log ""
 log "=== ALL CAPTURES COMPLETE ==="

@@ -1,115 +1,115 @@
 {
-  "best_alpha": 0.4,
-  "formula": "Final = 0.40 \u00d7 Flow_Prob + 0.60 \u00d7 Payload_Prob",
+  "best_alpha": 0.8,
+  "formula": "Final = 0.80 \u00d7 Flow_Prob + 0.20 \u00d7 Payload_Prob",
   "cv_results": [
     {
       "alpha": 0.0,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9041,
+      "f1_std": 0.0066
     },
     {
       "alpha": 0.05,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9084,
+      "f1_std": 0.0025
     },
     {
       "alpha": 0.1,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9155,
+      "f1_std": 0.006
     },
     {
       "alpha": 0.15,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9192,
+      "f1_std": 0.0046
     },
     {
       "alpha": 0.2,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9237,
+      "f1_std": 0.0058
     },
     {
       "alpha": 0.25,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9274,
+      "f1_std": 0.0049
     },
     {
       "alpha": 0.3,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9329,
+      "f1_std": 0.0081
     },
     {
       "alpha": 0.35,
-      "f1_mean": 0.9223,
-      "f1_std": 0.0768
+      "f1_mean": 0.9391,
+      "f1_std": 0.0095
     },
     {
       "alpha": 0.4,
-      "f1_mean": 0.9247,
-      "f1_std": 0.0772
+      "f1_mean": 0.9471,
+      "f1_std": 0.0078
     },
     {
       "alpha": 0.45,
-      "f1_mean": 0.9247,
-      "f1_std": 0.0772
+      "f1_mean": 0.9509,
+      "f1_std": 0.0061
     },
     {
       "alpha": 0.5,
-      "f1_mean": 0.9247,
-      "f1_std": 0.0772
+      "f1_mean": 0.9537,
+      "f1_std": 0.0056
     },
     {
       "alpha": 0.55,
-      "f1_mean": 0.9247,
-      "f1_std": 0.0772
+      "f1_mean": 0.9565,
+      "f1_std": 0.0107
     },
     {
       "alpha": 0.6,
-      "f1_mean": 0.9247,
-      "f1_std": 0.0772
+      "f1_mean": 0.9555,
+      "f1_std": 0.0126
     },
     {
       "alpha": 0.65,
-      "f1_mean": 0.9247,
-      "f1_std": 0.0772
+      "f1_mean": 0.9546,
+      "f1_std": 0.0114
     },
     {
       "alpha": 0.7,
-      "f1_mean": 0.918,
-      "f1_std": 0.0588
+      "f1_mean": 0.9574,
+      "f1_std": 0.0107
     },
     {
       "alpha": 0.75,
-      "f1_mean": 0.918,
-      "f1_std": 0.0588
+      "f1_mean": 0.9602,
+      "f1_std": 0.0111
     },
     {
       "alpha": 0.8,
-      "f1_mean": 0.9021,
-      "f1_std": 0.0623
+      "f1_mean": 0.9621,
+      "f1_std": 0.0098
     },
     {
       "alpha": 0.85,
-      "f1_mean": 0.9021,
-      "f1_std": 0.0623
+      "f1_mean": 0.962,
+      "f1_std": 0.0114
     },
     {
       "alpha": 0.9,
-      "f1_mean": 0.8898,
-      "f1_std": 0.0588
+      "f1_mean": 0.9611,
+      "f1_std": 0.0115
     },
     {
       "alpha": 0.95,
-      "f1_mean": 0.8898,
-      "f1_std": 0.0588
+      "f1_mean": 0.9611,
+      "f1_std": 0.0122
     },
     {
       "alpha": 1.0,
-      "f1_mean": 0.8898,
-      "f1_std": 0.0588
+      "f1_mean": 0.962,
+      "f1_std": 0.0107
     }
   ],
   "n_folds": 5,
-  "n_samples": 85,
+  "n_samples": 1089,
   "flow_features": [
     "conn_rate",
     "packets_per_conn",
@@ -128,6 +128,6 @@
     "valid_payload_ratio",
     "suspicious_history_ratio"
   ],
-  "best_f1": 0.9247,
-  "best_f1_std": 0.0772
+  "best_f1": 0.9621,
+  "best_f1_std": 0.0098
 }

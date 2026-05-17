@@ -92,7 +92,7 @@ for tool_folder in os.listdir(DATA_DIR):
     folder_path = os.path.join(DATA_DIR, tool_folder)
     if os.path.isdir(folder_path):
         # Đọc các file .gz trong thư mục
-        for file in glob.glob(os.path.join(folder_path, "conn.log.gz")):
+        for file in glob.glob(os.path.join(folder_path, "conn*.log.gz")):
             try:
                 # Đọc thẳng file nén gzip
                 df = pd.read_csv(file, sep='\t', comment='#', header=None, names=ZEEK_COLUMNS, compression='gzip')

@@ -1,0 +1,18 @@
+{
+  "E1 - Slow Scan (nmap --scan-delay 1s)": {
+    "windows": 12,
+    "detection_rate": 100.0,
+    "predictions": {
+      "masscan": 12
+    },
+    "mean_confidence": 0.8124184428110403
+  },
+  "E2 - Fake User-Agent (nmap -sV --script)": {
+    "windows": 4,
+    "detection_rate": 100.0,
+    "predictions": {
+      "masscan": 4
+    },
+    "mean_confidence": 0.6541649950240828
+  }
+}
